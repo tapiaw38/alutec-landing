@@ -1,0 +1,204 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const WHATSAPP = '5491100000000'; // ponytail: número placeholder, reemplazar por el real
+const PHONE_DISPLAY = '+54 9 11 0000-0000';
+const EMAIL = 'contacto@alutec.com.ar';
+const ZONA = 'CABA y GBA';
+
+const servicios = [
+  {
+    codigo: 'L-25',
+    titulo: 'Ventanas de aluminio',
+    desc: 'Corredizas, abatibles y oscilobatientes a medida, con o sin DVH.',
+  },
+  {
+    codigo: 'L-30',
+    titulo: 'Puertas y cerramientos',
+    desc: 'Frentes, balcones y galerías cerradas en aluminio línea A30.',
+  },
+  {
+    codigo: 'L-40',
+    titulo: 'Mamparas y divisiones',
+    desc: 'Mamparas de baño, divisiones de oficina y frentes vidriados.',
+  },
+  {
+    codigo: 'SV',
+    titulo: 'Mantenimiento y reparación',
+    desc: 'Cambio de burletes, rodamientos y ajustes de herrajes.',
+  },
+];
+
+const specs = [
+  { n: '15+', l: 'Años de oficio' },
+  { n: '24h', l: 'Presupuesto' },
+  { n: '100%', l: 'Instalación propia' },
+  { n: '1', l: 'Garantía escrita' },
+];
+---
+
+<Layout>
+  <header class="sticky top-0 z-10 border-b border-line bg-canvas/90 backdrop-blur">
+    <div class="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
+      <span class="font-display text-lg font-bold tracking-tight text-ink">ALU·TEC</span>
+      <nav class="hidden gap-8 font-mono text-xs uppercase tracking-wider text-metal sm:flex">
+        <a href="#servicios" class="hover:text-ink">Servicios</a>
+        <a href="#nosotros" class="hover:text-ink">Nosotros</a>
+        <a href="#contacto" class="hover:text-ink">Contacto</a>
+      </nav>
+      <a
+        href={`https://wa.me/${WHATSAPP}`}
+        target="_blank"
+        rel="noopener"
+        class="rounded-sm bg-accent px-4 py-2 font-mono text-xs font-medium uppercase tracking-wider text-canvas transition hover:bg-accent-dim"
+      >
+        Presupuesto →
+      </a>
+    </div>
+  </header>
+
+  <main>
+    <section class="mx-auto max-w-6xl px-6 py-16 sm:py-24">
+      <div class="grid gap-14 md:grid-cols-2 md:items-center">
+        <div>
+          <p class="font-mono text-xs uppercase tracking-[0.2em] text-accent">
+            Fabricación · Instalación · Colocación
+          </p>
+          <h1 class="mt-4 font-display text-5xl font-bold leading-[1.05] tracking-tight text-ink sm:text-6xl">
+            Carpintería de
+            aluminio a medida
+          </h1>
+          <p class="mt-6 max-w-md text-base text-metal">
+            Fabricamos e instalamos ventanas, puertas y cerramientos de aluminio
+            para tu casa u obra. Terminación de taller, ajuste de precisión.
+          </p>
+          <div class="mt-8 flex flex-wrap gap-4">
+            <a
+              href={`https://wa.me/${WHATSAPP}`}
+              target="_blank"
+              rel="noopener"
+              class="rounded-sm bg-ink px-6 py-3 font-mono text-sm font-medium text-canvas transition hover:bg-graphite"
+            >
+              Pedir presupuesto →
+            </a>
+            <a
+              href="#servicios"
+              class="rounded-sm border border-line px-6 py-3 font-mono text-sm font-medium text-ink transition hover:border-ink"
+            >
+              Ver servicios
+            </a>
+          </div>
+        </div>
+
+        <div class="reveal rounded-sm border border-line bg-canvas-alt p-6">
+          <p class="font-mono text-[11px] uppercase tracking-[0.2em] text-metal">
+            Ficha técnica — Perfil L-40
+          </p>
+          <svg
+            viewBox="0 0 320 260"
+            class="mt-4 w-full text-ink"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <rect x="60" y="40" width="140" height="180" rx="3" />
+            <line x1="130" y1="40" x2="130" y2="220" stroke-width="1.5" />
+            <polyline points="200,110 220,110 220,150 200,150" />
+
+            <g class="draw-line" stroke="#d9481f" stroke-width="1.5">
+              <line x1="60" y1="18" x2="200" y2="18" />
+              <line x1="60" y1="12" x2="60" y2="24" />
+              <line x1="200" y1="12" x2="200" y2="24" />
+            </g>
+            <text x="130" y="12" text-anchor="middle" fill="#d9481f" stroke="none" font-family="IBM Plex Mono" font-size="11">45 mm</text>
+
+            <g class="draw-line" stroke="#d9481f" stroke-width="1.5">
+              <line x1="38" y1="40" x2="38" y2="220" />
+              <line x1="32" y1="40" x2="44" y2="40" />
+              <line x1="32" y1="220" x2="44" y2="220" />
+            </g>
+            <text x="20" y="134" text-anchor="middle" fill="#d9481f" stroke="none" font-family="IBM Plex Mono" font-size="11" transform="rotate(-90 20 134)">60 mm</text>
+
+            <line x1="220" y1="130" x2="238" y2="130" stroke="#80878e" stroke-width="1" />
+            <circle cx="238" cy="130" r="2" fill="#80878e" stroke="none" />
+            <text x="242" y="134" fill="#80878e" stroke="none" font-family="IBM Plex Mono" font-size="9">canal de vidrio</text>
+
+            <line x1="130" y1="150" x2="90" y2="190" stroke="#80878e" stroke-width="1" />
+            <circle cx="90" cy="190" r="2" fill="#80878e" stroke="none" />
+            <text x="60" y="205" fill="#80878e" stroke="none" font-family="IBM Plex Mono" font-size="10">cámara de aislación</text>
+          </svg>
+          <div class="mt-5 grid grid-cols-3 gap-2 border-t border-line pt-4 font-mono text-[11px] text-metal">
+            <div><span class="block text-ink">Ancho</span>45 mm</div>
+            <div><span class="block text-ink">Pared</span>1.4 mm</div>
+            <div><span class="block text-ink">Acabado</span>Anodizado</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="servicios" class="border-t border-line">
+      <div class="mx-auto max-w-6xl px-6 py-20">
+        <div class="flex items-baseline justify-between">
+          <h2 class="font-display text-2xl font-bold tracking-tight text-ink">Servicios</h2>
+          <span class="font-mono text-xs uppercase tracking-wider text-metal">Lista de corte</span>
+        </div>
+        <div class="mt-8 border-t border-line">
+          {
+            servicios.map((s) => (
+              <div class="reveal group border-b border-line py-6 pl-3 transition hover:border-l-4 hover:border-l-accent hover:pl-5 sm:grid sm:grid-cols-[4rem_12rem_1fr] sm:gap-4">
+                <div class="flex items-baseline gap-3 sm:contents">
+                  <span class="font-mono text-sm text-accent">{s.codigo}</span>
+                  <h3 class="font-display font-semibold text-ink">{s.titulo}</h3>
+                </div>
+                <p class="mt-2 text-sm text-metal sm:mt-0">{s.desc}</p>
+              </div>
+            ))
+          }
+        </div>
+      </div>
+    </section>
+
+    <section id="nosotros" class="border-t border-line bg-canvas-alt">
+      <div class="mx-auto grid max-w-6xl gap-px sm:grid-cols-4">
+        {
+          specs.map((s) => (
+            <div class="reveal border-t border-line bg-canvas-alt px-6 py-10 sm:border-l sm:border-t-0 first:sm:border-l-0">
+              <p class="font-mono text-4xl font-medium text-ink">{s.n}</p>
+              <p class="mt-1 font-mono text-xs uppercase tracking-wider text-metal">{s.l}</p>
+            </div>
+          ))
+        }
+      </div>
+    </section>
+
+    <section id="contacto" class="bg-graphite">
+      <div class="mx-auto max-w-6xl px-6 py-20">
+        <h2 class="font-display text-3xl font-bold tracking-tight text-canvas sm:text-4xl">
+          Hablemos de tu obra
+        </h2>
+        <p class="mt-3 max-w-md text-sm text-metal">
+          Contanos qué necesitás y te respondemos con un presupuesto a medida, sin cargo.
+        </p>
+        <div class="mt-8">
+          <a
+            href={`https://wa.me/${WHATSAPP}`}
+            target="_blank"
+            rel="noopener"
+            class="inline-block rounded-sm bg-accent px-6 py-3 font-mono text-sm font-medium text-canvas transition hover:bg-accent-dim"
+          >
+            Escribir por WhatsApp →
+          </a>
+        </div>
+        <dl class="mt-12 grid gap-4 border-t border-white/10 pt-8 font-mono text-sm text-metal sm:grid-cols-3">
+          <div><dt class="text-xs uppercase tracking-wider text-canvas/60">Tel</dt><dd class="mt-1 text-canvas">{PHONE_DISPLAY}</dd></div>
+          <div><dt class="text-xs uppercase tracking-wider text-canvas/60">Mail</dt><dd class="mt-1 text-canvas">{EMAIL}</dd></div>
+          <div><dt class="text-xs uppercase tracking-wider text-canvas/60">Zona</dt><dd class="mt-1 text-canvas">{ZONA}</dd></div>
+        </dl>
+      </div>
+    </section>
+  </main>
+
+  <footer class="border-t border-line bg-canvas py-6 text-center font-mono text-xs text-metal">
+    © {new Date().getFullYear()} Alutec — Carpintería de aluminio
+  </footer>
+</Layout>
